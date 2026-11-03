@@ -1,0 +1,73 @@
+name: Bug report
+description: Something is broken, crashes, or behaves differently from what the README says.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If this is a security problem, **stop** and mail admin@moddys.net instead of opening an
+        issue. Public issues are for bugs in normal use.
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The release tag, or the version line in the app's About or Check panel.
+      placeholder: "1.0.33"
+    validations:
+      required: true
+
+  - type: input
+    id: platform
+    attributes:
+      label: What it was running on
+      description: OS build, device, browser — whatever is relevant to this program.
+      placeholder: "Windows 11 24H2 / Android 14 / Chrome 141"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: In order, starting from a fresh launch. If it only happens sometimes, say so and say how often.
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. Wait ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: The exact error text or behaviour, not a summary of it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: extras
+    attributes:
+      label: Screenshots, logs or a sample file
+      description: Drag a file in, or paste the log. A sample that reproduces it is worth ten screenshots.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before posting
+      options:
+        - label: I am on the latest release, or I have said which release I am on.
+          required: true
+        - label: I searched the open and closed issues for the same problem.
+          required: true

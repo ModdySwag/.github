@@ -1,0 +1,45 @@
+name: Feature request
+description: Something the program should do, or should do better.
+title: "[idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem before the solution. A request that needs an account, a cloud
+        service or telemetry will be declined — that is the one hard rule here.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do, and what stops you?
+      placeholder: "I want to ... but the app ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like it to do?
+      description: A rough idea is fine. A mock-up is welcome but not required.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What do you do instead today?
+      description: Another program, a script, or a manual workaround.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: build
+    attributes:
+      label: Would you build it if it were possible?
+      options:
+        - "No — I am reporting the need, not volunteering"
+        - "Maybe, with some pointers"
+        - "Yes — I can send a patch"
+    validations:
+      required: false
